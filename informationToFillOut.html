@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>资料填写</title>
+    <link rel="stylesheet" href="css/informationToFillOut.css"/>
+    <script src="js/severDaysLovers.js"></script>
+</head>
+<body>
+    <header id="head">
+        <img src="image/banner.jpg" class="background-pic" alt=""/>
+    </header>
+    <section id="main">
+        <p class="text-pink">(个人资料将严格保密，只用于匹配CP，请放心填写)</p>
+
+        <form action="" id="form">
+            <div id="basicInformation">
+                <div class="title">基本资料（必填）</div>
+                <ul >
+                    <li>
+                        <label for="phone" class="left">
+                            手机
+                            <input type="text" name="phone" class="right" id="phone" value="" placeholder="手机号码不公开"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="gender">
+                            性别
+                            <input type="text" id="gender" name="gender" class="text-pink" value="男" placeholder=""/>
+                        </label>
+
+                        <img src="image/right.png" class="img" alt=""/>
+                    </li>
+                    <li>
+                        <label for="birthday">
+                            生日
+                            <input type="text" name="birthday" id="birthday" class="text-pink" value="1991-12-19" placeholder=""/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="provinces">
+                            所在省份
+                            <input type="text" name="provinces" id="provinces" value="" placeholder="请选择你现在所在的省份"/>
+                        </label>
+                        <img src="image/right.png" class="img" alt=""/>
+                    </li>
+                    <li>
+                        <label for="city">
+                            所在城市
+                            <input type="text" name="city" id="city" class="text-pink " value="济南" placeholder=""/>
+                        </label>
+                        <img src="image/right.png" class="img" alt=""/>
+                    </li>
+                    <li>
+                        <label for="weChat">
+                            微信号
+                            <input type="text" name="weChat" id="weChat" value="" placeholder="微信号仅用于添加cp和房主(不公开)"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="school">
+                            学校
+                            <input type="text" name="school" id="school" value="" placeholder="请填写中文全称，已经毕业的填母校"/>
+                        </label>
+
+                    </li>
+                </ul>
+            </div>
+            <div id="matchTheTendency">
+                <div class="title">匹配倾向（必填）</div>
+                <ul >
+                    <li>
+                        可接受怎样的性别匹配
+                    </li>
+                    <li>
+                        <input type="text" name="genderMatching" id="genderMatching" class="text-pink" value="只接受和异性"/>
+                        <img src="image/right.png" class="img" alt=""/>
+                    </li>
+                    <li>
+                        可接受怎样的性别匹配
+                    </li>
+                    <li>
+                        <input type="text"  class="text-pink" value="只接受和异性"/>
+                        <img src="image/right.png" class="img" alt=""/>
+                    </li>
+                    <li>
+                        可接受怎样的年龄匹配
+                    </li>
+                    <li>
+                        <input type="text" name="ageMatching" id="ageMatching"  class="text-pink" value="都可以接受"/>
+                        <img src="image/right.png" class="img" alt=""/>
+                    </li>
+
+                </ul>
+            </div>
+            <div id="detailedInformationMandatory">
+                <div class="title">详细资料（必填）</div>
+                <ul >
+                    <li>
+                        成长经历(必填)
+                    </li>
+                    <li>
+                        <textarea name="experience" id="experience" cols="45" rows="4">讲述一下自己成长经历吧~例：小时候在温州长大，后来父母经商随他们来到杭州。大学在澳洲学习设计毕业后回到杭州工作。
+                        </textarea>
+                    </li>
+                    <li>
+                        最近正在忙的一件事（必填）
+                    </li>
+                    <li>
+                        <textarea name="things" id="things" cols="45" rows="4">讲述一下最近正在忙的一件事吧~例：马上准备雅思考试，每天泡图书馆学习or项目马上要更新版本，每天加班熬夜。
+                        </textarea>
+                    </li>
+                    <li>
+                        未来想要做什么（必填）
+                    </li>
+                    <li>
+                        <textarea name="future" id="future" cols="45" rows="4">描述一下自己未来的规划吧~例：以后还是打算在杭州定居，因为大学学习设计，所以还是继续在建筑行业发展。真心喜欢做设计，虽然赶图加
+                        </textarea>
+                    </li>
+                    <li>
+                        3个与众不同的特点（必填）
+                    </li>
+                    <li>
+                        <textarea name="characteristic" id="characteristic" cols="45" rows="4">描述一下自己的特点吧~例：重度强迫症。永远嘻嘻哈哈。一言不合就开火车。
+                        </textarea>
+                    </li>
+                </ul>
+            </div>
+            <div id="detailedInformationOptional">
+                <div class="title">
+                    <span class="left">详细资料（选填）</span>
+                    <p class="right">*资料完整度越高，入选概率越高哦</p>
+                </div>
+                <ul >
+                    <li>
+                        去过的地方
+                    </li>
+                    <li>
+                        <textarea name="place" id="place" cols="45" rows="3">例：去过北京，喜欢充满生活气息的小胡同，喜欢老北京的韵味。</textarea>
+                    </li>
+                    <li>
+                        喜欢的音乐
+                    </li>
+                    <li>
+                        <textarea name="music" id="music" cols="45" rows="3">例：喜欢周杰伦，陪伴了我整个青春。</textarea>
+                    </li>
+                    <li>
+                        喜欢的电影或剧
+                    </li>
+                    <li>
+                        <textarea name="movie" id="movie" cols="45" rows="3">例：《泰坦尼克号》百看不厌。《太阳的后裔》也喜欢看。</textarea>
+                    </li>
+                    <li>
+                        喜欢的书或番
+                    </li>
+                    <li>
+                        <textarea name="book" id="book" cols="45" rows="3">例：《哈利波特》从小看到大不解释。《fate》和《进击的巨人》都爱看。</textarea>
+                    </li>
+                    <li>
+                        喜欢的食物
+                    </li>
+                    <li>
+                        <textarea name="food" id="food" cols="45" rows="3">例：麻辣火锅！无辣不欢！！！</textarea>
+                    </li>
+                    <li>
+                        喜欢的运动
+                    </li>
+                    <li>
+                        <textarea name="movement" id="movement" cols="45" rows="3">例：篮球，当年院队的一把手。偶尔也爱打打羽毛球。经常健身，六块腹肌。</textarea>
+                    </li>
+                    <li>
+                        简单描述自己的外貌
+                    </li>
+                    <li>
+                        <textarea name="appearance" id="appearance" cols="45" rows="3">例：皮肤好~眼睛大，有腹肌，个子高，台风吹不跑~</textarea>
+                    </li>
+
+                    <li>
+                        宠物
+                    </li>
+                    <li>
+                        <textarea name="pet" id="pet" cols="45" rows="3">例：超喜欢猫，那种丑丑的猫，最喜欢加菲猫，哈士奇也超喜欢，话唠很好玩~</textarea>
+                    </li>
+                </ul>
+            </div>
+            <button>提交</button>
+        </form>
+
+    </section>
+
+
+
+
+</body>
+</html>
