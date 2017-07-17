@@ -5,8 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <title>资料填写</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/mobiscroll-2.13.2.full.min.css"/>
     <link rel="stylesheet" href="css/informationToFillOut.css"/>
-    <script src="js/severDaysLovers.js"></script>
+
 </head>
 <body>
     <header id="head">
@@ -26,15 +28,20 @@
                         </label>
 
                     </li>
-                    <li>
+                    <li id="sex">
                         <label for="gender">
                             性别
-                            <input type="text" id="gender" name="gender" class="text-pink" value="男" placeholder=""/>
+                            <!--<input type="text" id="gender" name="gender" class="text-pink" value="" placeholder=""/>-->
+                            <ul id="sex-list" style="display: none">
+                                <li>男</li>
+                                <li>女</li>
+                            </ul>
                         </label>
+                        <img src="image/right.png"   class="img" alt=""/>
 
-                        <img src="image/right.png" class="img" alt=""/>
                     </li>
-                    <li>
+
+                    <li id="data">
                         <label for="birthday">
                             生日
                             <input type="text" name="birthday" id="birthday" class="text-pink" value="1991-12-19" placeholder=""/>
@@ -47,6 +54,7 @@
                             <input type="text" name="provinces" id="provinces" value="" placeholder="请选择你现在所在的省份"/>
                         </label>
                         <img src="image/right.png" class="img" alt=""/>
+
                     </li>
                     <li>
                         <label for="city">
@@ -77,23 +85,37 @@
                     <li>
                         可接受怎样的性别匹配
                     </li>
-                    <li>
-                        <input type="text" name="genderMatching" id="genderMatching" class="text-pink" value="只接受和异性"/>
+                    <li id="genderMatching">
+                        <!--<input type="text" name="genderMatching"  class="text-pink" value="只接受和异性"/>-->
                         <img src="image/right.png" class="img" alt=""/>
+                        <ul id="gender-list" style="display: none">
+                            <li>只接受和异性</li>
+                            <li>只接受和同性</li>
+                        </ul>
                     </li>
                     <li>
-                        可接受怎样的性别匹配
+                        可接受怎样的区域匹配
                     </li>
-                    <li>
-                        <input type="text"  class="text-pink" value="只接受和异性"/>
+                    <li id="area">
+                        <!--<input type="text"  name="area" id="area" class="text-pink" value="都可以接受"/>-->
                         <img src="image/right.png" class="img" alt=""/>
+                        <ul id="area-list" style="display: none">
+                            <li>都可以接受</li>
+                            <li>只接受同城</li>
+                            <li>只接受异地</li>
+                        </ul>
                     </li>
                     <li>
                         可接受怎样的年龄匹配
                     </li>
-                    <li>
-                        <input type="text" name="ageMatching" id="ageMatching"  class="text-pink" value="都可以接受"/>
+                    <li id="ageMatching">
+                        <!--<input type="text" name="ageMatching" id="ageMatching"  class="text-pink" value="都可以接受"/>-->
                         <img src="image/right.png" class="img" alt=""/>
+                        <ul id="age-list" style="display: none">
+                            <li>都可以接受</li>
+                            <li>只接受比自己大的</li>
+                            <li>只接受比自己小的</li>
+                        </ul>
                     </li>
 
                 </ul>
@@ -194,7 +216,10 @@
     </section>
 
 
-
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"> </script>
+    <script type="text/javascript" src="js/mobiscroll-2.13.2.full.min.js"> </script>
+    <script type="text/javascript" src="js/severDaysLovers.js"></script>
 
 </body>
 </html>
