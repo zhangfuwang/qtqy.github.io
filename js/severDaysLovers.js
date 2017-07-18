@@ -149,3 +149,6 @@ $("#current-area").click(function () {
     $("input[id^=current-area-list]").focus();
 });
 $("input").addClass("text-pink").css({"font-weight":400});
+$("textarea").focus(function(){
+    $(this).html(" ");
+});
