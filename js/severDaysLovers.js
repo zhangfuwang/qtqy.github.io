@@ -74,7 +74,7 @@ $("#genderMatching").click(function () {
         headerText: '请您选择',
         onSelect: function (valueText) {
             var m = $(this).find("li").eq(valueText).html();
-            $("#gender-list_dummy").val(m).addClass("text-pink").r;
+            $("#gender-list_dummy").val(m).addClass("text-pink").prev().css({"display":"none"});;
 
         }
     });
@@ -91,7 +91,7 @@ $("#area").click(function () {
         headerText: '请您选择',
         onSelect: function (valueText) {
             var m = $(this).find("li").eq(valueText).html();
-            $("#area-list_dummy").val(m).addClass("text-pink").r;
+            $("#area-list_dummy").val(m).addClass("text-pink").prev().css({"display":"none"});;
 
         }
     });
@@ -108,9 +108,44 @@ $("#ageMatching").click(function () {
         headerText: '请您选择',
         onSelect: function (valueText) {
             var m = $(this).find("li").eq(valueText).html();
-            $("#age-list_dummy").val(m).addClass("text-pink").r;
+            $("#age-list_dummy").val(m).addClass("text-pink").prev().css({"display":"none"});
 
         }
     });
     $("input[id^=age-list]").focus();
 });
+$("#current-area").click(function () {
+    var that = this;
+    console.log("1");
+    $("#current-area-list").mobiscroll().treelist({
+        theme: "android-ics",
+        lang: "zh",
+        display: 'bottom',
+        inputClass: 'tmp',
+        headerText: '请您选择',
+        onSelect: function (valueText, inst) {
+            console.log(valueText);
+            var n = valueText.split(' ');
+            var m1 = $(this).children("li").eq(n[0]).find("div").html();
+            var m1_id = $(this).children("li").eq(n[0]).find("div").attr("data-value");
+            var m2 = $(this).children("li").eq(n[0]).find("li").eq(n[1]).html();
+            var m2_id = $(this).children("li").eq(n[0]).find("li").eq(n[1]).attr("data-value");
+            console.log(m1);
+            console.log(m2);
+            console.log(m1_id);
+            console.log(m2_id);
+            $("#current-area-list_dummy")
+            $("#current-area-list_dummy").val(m1+"  "+m2).addClass("text-pink").prev().css({"display":"none"});
+            /*$.post("inc/person.org.php", {apart: "resume_base", current_area: m1+m2, current_areaPID: m1_id, current_areaCID: m2_id}, function (result) {
+             if (result == 'ok') {
+             $(that).find(".mbase-menu-txt").html(m1+m2);
+             }
+             else {
+             error('网络繁忙，请您稍后再试');
+             }
+             });后端处理部分*/
+        }
+    });
+    $("input[id^=current-area-list]").focus();
+});
+$("input").addClass("text-pink").css({"font-weight":400});
